@@ -18,12 +18,20 @@ public class Rhombus extends Shape {
 			double thirdSide,
 			double fourthSide){
 		super(name);
+		this.firstDiagonal = firstDiagonal;
+		this.secondDiagonal = secondDiagonal;
+		this.firstSide = firstSide;
+		this.secondSide = secondSide;
+		this.thirdSide = thirdSide;
+		this.fourthSide = fourthSide;
 	}
 	
 	@Override
 	double area() {
-		//stab
-		return 0.0;
+		if(firstDiagonal <= 0 || secondDiagonal <= 0) {
+			return 0;
+		}
+		return (firstDiagonal * secondDiagonal) / 2.0;
 	}
 
 	@Override
