@@ -14,7 +14,14 @@ class ShapeTest {
 	
 	@Test
 	void testCircleArea() {
-		fail("Not yet implemented");
+		Circle circle = new Circle("Test circle", 10);
+		assertEquals(314.16, roundToTwoDecimals(circle.area()));
+		Circle circle2 = new Circle("Test circle", -10);
+		assertEquals(0, roundToTwoDecimals(circle2.area()));
+		Circle circle3 = new Circle("Test circle", 0);
+		assertEquals(0, roundToTwoDecimals(circle3.area()));
+		Circle circle4 = new Circle("Test circle", 123.45);
+		assertEquals(47877.57, roundToTwoDecimals(circle4.area()));
 	}
 	
 	@Test
