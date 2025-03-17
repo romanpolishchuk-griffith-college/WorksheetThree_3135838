@@ -34,7 +34,9 @@ public class RightAngledTriangle extends Shape {
 
 	@Override
 	public String toString() {
-		//stab
-		return "";
+		return "Right Angled Triangle has name: " + getName() +
+				", and firstSide: " + firstSide +
+				", secondSide: " + secondSide + 
+				", hypothenuse: " + hypothenuse;
 	}
 }
