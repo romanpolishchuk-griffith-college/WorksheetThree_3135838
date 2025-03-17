@@ -11,14 +11,16 @@ public class Circle extends Shape {
 	
 	@Override
 	double area() {
-		//stab
-		return 0.0;
+		if (radius <= 0) {
+			return 0;
+		}
+		return Math.PI * (radius * radius);
 	}
 
 	@Override
 	double perimeter() {
 		//stab
-		return 0.0;
+		return 0;
 	}
 
 	@Override
