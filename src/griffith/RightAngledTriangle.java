@@ -26,8 +26,10 @@ public class RightAngledTriangle extends Shape {
 
 	@Override
 	double perimeter() {
-		//stab
-		return 0.0;
+		if(firstSide <= 0 || secondSide <= 0) {
+			return 0;
+		}
+		return firstSide + secondSide + hypothenuse;
 	}
 
 	@Override
