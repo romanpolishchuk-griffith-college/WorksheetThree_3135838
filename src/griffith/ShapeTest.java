@@ -106,7 +106,12 @@ class ShapeTest {
 	
 	@Test
 	void testRightAngledTriangleToString() {
-		fail("Not yet implemented");
+		RightAngledTriangle rightAngledTriangle = new RightAngledTriangle("Test triangle 1", 5, 10, 15);
+		assertEquals("Right Angled Triangle has name: Test triangle 1, and firstSide: 5.0, secondSide: 10.0, hypothenuse: 15.0", rightAngledTriangle.toString());
+		RightAngledTriangle rightAngledTriangle2 = new RightAngledTriangle("Test triangle 2", 2, 3, 4);
+		assertEquals("Right Angled Triangle has name: Test triangle 2, and firstSide: 2.0, secondSide: 3.0, hypothenuse: 4.0", rightAngledTriangle2.toString());
+		RightAngledTriangle rightAngledTriangle3 = new RightAngledTriangle("Test triangle 3", -5, -10, -15);
+		assertEquals("Right Angled Triangle has name: Test triangle 3, and firstSide: -5.0, secondSide: -10.0, hypothenuse: -15.0", rightAngledTriangle3.toString());
 	}
 
 	// Integration tests
