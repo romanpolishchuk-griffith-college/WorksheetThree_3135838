@@ -26,7 +26,14 @@ class ShapeTest {
 	
 	@Test
 	void testCirclePerimeter() {
-		fail("Not yet implemented");
+		Circle circle = new Circle("Test circle", 10);
+		assertEquals(62.83, roundToTwoDecimals(circle.perimeter()));
+		Circle circle2 = new Circle("Test circle", -10);
+		assertEquals(0, roundToTwoDecimals(circle2.perimeter()));
+		Circle circle3 = new Circle("Test circle", 0);
+		assertEquals(0, roundToTwoDecimals(circle3.perimeter()));
+		Circle circle4 = new Circle("Test circle", 123.45);
+		assertEquals(775.66, roundToTwoDecimals(circle4.perimeter()));
 	}
 	
 	@Test
