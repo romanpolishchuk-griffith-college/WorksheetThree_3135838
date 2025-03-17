@@ -96,7 +96,12 @@ class ShapeTest {
 	
 	@Test
 	void testRightAngledTrianglePerimeter() {
-		fail("Not yet implemented");
+		RightAngledTriangle rightAngledTriangle = new RightAngledTriangle("Test triangle", 5, 10, 15);
+		assertEquals(30, roundToTwoDecimals(rightAngledTriangle.perimeter()));
+		RightAngledTriangle rightAngledTriangle2 = new RightAngledTriangle("Test triangle", 2, 3, 4);
+		assertEquals(9, roundToTwoDecimals(rightAngledTriangle2.perimeter()));
+		RightAngledTriangle rightAngledTriangle3 = new RightAngledTriangle("Test triangle", -5, -10, -15);
+		assertEquals(0, roundToTwoDecimals(rightAngledTriangle3.perimeter()));
 	}
 	
 	@Test
