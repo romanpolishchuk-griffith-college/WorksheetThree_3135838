@@ -50,7 +50,12 @@ class ShapeTest {
 	
 	@Test
 	void testRhombusArea() {
-		fail("Not yet implemented");
+		Rhombus rhombus = new Rhombus("Test rhombus", 2, 3, 4, 5, 6, 10);
+		assertEquals(3, roundToTwoDecimals(rhombus.area()));
+		Rhombus rhombus2 = new Rhombus("Test rhombus", 5, 6, 7, 8, 9, 20);
+		assertEquals(15, roundToTwoDecimals(rhombus2.area()));
+		Rhombus rhombus3 = new Rhombus("Test rhombus", -5, -6, -7, -8, -9, -20);
+		assertEquals(0, roundToTwoDecimals(rhombus3.area()));
 	}
 	
 	@Test
