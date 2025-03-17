@@ -2,9 +2,9 @@ package griffith;
 
 public class Circle extends Shape {
 
-	private float radius;
+	private double radius;
 	
-	Circle(String name, float radius){
+	Circle(String name, double radius){
 		super(name);
 		this.radius = radius;
 	}

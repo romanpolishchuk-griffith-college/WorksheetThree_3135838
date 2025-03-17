@@ -2,14 +2,14 @@ package griffith;
 
 public class RightAngledTriangle extends Shape {
 
-	private float firstSide;
-	private float secondSide;
-	private float hypothenuse;
+	private double firstSide;
+	private double secondSide;
+	private double hypothenuse;
 	
 	RightAngledTriangle(String name,
-			float firstSide,
-			float secondSide,
-			float hypothenuse){
+			double firstSide,
+			double secondSide,
+			double hypothenuse){
 		super(name);
 	}
 	

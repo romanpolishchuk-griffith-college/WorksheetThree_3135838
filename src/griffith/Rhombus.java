@@ -2,21 +2,21 @@ package griffith;
 
 public class Rhombus extends Shape {
 
-	private float firstDiagonal;
-	private float secondDiagonal;
+	private double firstDiagonal;
+	private double secondDiagonal;
 	
-	private float firstSide;
-	private float secondSide;
-	private float thirdSide;
-	private float fourthSide;
+	private double firstSide;
+	private double secondSide;
+	private double thirdSide;
+	private double fourthSide;
 	
 	Rhombus(String name,
-			float firstDiagonal,
-			float secondDiagonal,
-			float firstSide,
-			float secondSide,
-			float thirdSide,
-			float fourthSide){
+			double firstDiagonal,
+			double secondDiagonal,
+			double firstSide,
+			double secondSide,
+			double thirdSide,
+			double fourthSide){
 		super(name);
 	}
 	
