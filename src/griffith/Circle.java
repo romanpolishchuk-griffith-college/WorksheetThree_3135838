@@ -19,8 +19,10 @@ public class Circle extends Shape {
 
 	@Override
 	double perimeter() {
-		//stab
-		return 0;
+		if (radius <= 0) {
+			return 0;
+		}
+		return 2 * Math.PI * radius;
 	}
 
 	@Override
