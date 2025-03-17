@@ -39,11 +39,11 @@ class ShapeTest {
 	@Test
 	void testCircleToString() {
 		Circle circle = new Circle("Test circle 1", 10);
-		assertEquals("Circle has name: Test circle 1, and radius 10", circle.toString());
+		assertEquals("Circle has name: Test circle 1, and radius 10.0", circle.toString());
 		Circle circle2 = new Circle("Test circle 2", -10);
-		assertEquals("Circle has name: Test circle 2, and radius -10", circle2.toString());
+		assertEquals("Circle has name: Test circle 2, and radius -10.0", circle2.toString());
 		Circle circle3 = new Circle("Test circle 3", 0);
-		assertEquals("Circle has name: Test circle 3, and radius 0", circle3.toString());
+		assertEquals("Circle has name: Test circle 3, and radius 0.0", circle3.toString());
 		Circle circle4 = new Circle("Test circle 4", 123.45);
 		assertEquals("Circle has name: Test circle 4, and radius 123.45", circle4.toString());
 	}

@@ -27,7 +27,6 @@ public class Circle extends Shape {
 
 	@Override
 	public String toString() {
-		//stab
-		return "";
+		return "Circle has name: " + getName() + ", and radius " + radius;
 	}
 }
