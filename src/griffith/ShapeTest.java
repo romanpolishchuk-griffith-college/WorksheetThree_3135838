@@ -6,6 +6,10 @@ import org.junit.jupiter.api.Test;
 
 class ShapeTest {
 
+	double roundToTwoDecimals(double num) {
+		return Math.round(num * 100.0) / 100.0;
+	}
+	
 	//Unit tests
 	
 	@Test
