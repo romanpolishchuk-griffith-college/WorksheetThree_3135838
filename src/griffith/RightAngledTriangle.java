@@ -6,6 +6,7 @@ public class RightAngledTriangle extends Shape {
 	private double secondSide;
 	private double hypothenuse;
 	
+	//Init variables
 	RightAngledTriangle(String name,
 			double firstSide,
 			double secondSide,
@@ -16,6 +17,7 @@ public class RightAngledTriangle extends Shape {
 		this.hypothenuse = hypothenuse;
 	}
 	
+	//Find right angled triangle area
 	@Override
 	double area() {
 		if(firstSide <= 0 || secondSide <= 0) {
@@ -24,6 +26,7 @@ public class RightAngledTriangle extends Shape {
 		return (firstSide * secondSide) / 2;
 	}
 
+	//Find right angled triangle perimeter
 	@Override
 	double perimeter() {
 		if(firstSide <= 0 || secondSide <= 0) {
@@ -32,6 +35,7 @@ public class RightAngledTriangle extends Shape {
 		return firstSide + secondSide + hypothenuse;
 	}
 
+	//Override toString method
 	@Override
 	public String toString() {
 		return "Right Angled Triangle has name: " + getName() +

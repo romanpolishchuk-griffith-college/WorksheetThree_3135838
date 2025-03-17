@@ -7,14 +7,17 @@ public abstract class Shape {
 		this.name = name;
 	}
 	
+	//Getter
 	public String getName() {
 		return name;
 	}
 
+	//Setter
 	public void setName(String name) {
 		this.name = name;
 	}
 	
+	//Abstract methods
 	abstract double area(); 
 	abstract double perimeter();
 	

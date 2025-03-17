@@ -15,6 +15,7 @@ class ShapeTest {
 	
 	//Unit tests
 	
+	//Test circle area method
 	@Test
 	void testCircleArea() {
 		Circle circle = new Circle("Test circle", 10);
@@ -27,6 +28,7 @@ class ShapeTest {
 		assertEquals(47877.57, roundToTwoDecimals(circle4.area()));
 	}
 	
+	//Test circle perimeter method
 	@Test
 	void testCirclePerimeter() {
 		Circle circle = new Circle("Test circle", 10);
@@ -39,6 +41,7 @@ class ShapeTest {
 		assertEquals(775.66, roundToTwoDecimals(circle4.perimeter()));
 	}
 	
+	//Test circle toString method
 	@Test
 	void testCircleToString() {
 		Circle circle = new Circle("Test circle 1", 10);
@@ -51,6 +54,7 @@ class ShapeTest {
 		assertEquals("Circle has name: Test circle 4, and radius 123.45", circle4.toString());
 	}
 	
+	//Test rhombus area method
 	@Test
 	void testRhombusArea() {
 		Rhombus rhombus = new Rhombus("Test rhombus", 2, 3, 4, 5, 6, 10);
@@ -61,6 +65,7 @@ class ShapeTest {
 		assertEquals(0, roundToTwoDecimals(rhombus3.area()));
 	}
 	
+	//Test rhombus perimeter method
 	@Test
 	void testRhombusPerimeter() {
 		Rhombus rhombus = new Rhombus("Test rhombus", 2, 3, 4, 5, 6, 10);
@@ -71,6 +76,7 @@ class ShapeTest {
 		assertEquals(0, roundToTwoDecimals(rhombus3.perimeter()));
 	}
 	
+	//Test rhombus toString method
 	@Test
 	void testRhombusToString() {
 		Rhombus rhombus = new Rhombus("Test rhombus 1", 2, 3, 4, 5, 6, 10);
@@ -87,6 +93,7 @@ class ShapeTest {
 				, rhombus3.toString());
 	}
 	
+	//Test right angled triangle area method
 	@Test
 	void testRightAngledTriangleArea() {
 		RightAngledTriangle rightAngledTriangle = new RightAngledTriangle("Test triangle", 5, 10, 15);
@@ -97,6 +104,7 @@ class ShapeTest {
 		assertEquals(0, roundToTwoDecimals(rightAngledTriangle3.area()));
 	}
 	
+	//Test right angled triangle perimeter method
 	@Test
 	void testRightAngledTrianglePerimeter() {
 		RightAngledTriangle rightAngledTriangle = new RightAngledTriangle("Test triangle", 5, 10, 15);
@@ -107,6 +115,7 @@ class ShapeTest {
 		assertEquals(0, roundToTwoDecimals(rightAngledTriangle3.perimeter()));
 	}
 	
+	//Test right angled triangle toString method
 	@Test
 	void testRightAngledTriangleToString() {
 		RightAngledTriangle rightAngledTriangle = new RightAngledTriangle("Test triangle 1", 5, 10, 15);
@@ -121,12 +130,14 @@ class ShapeTest {
 	
 	@Test
 	void testArrayListOfShapes() {
+		//List of correct areas and perimetes for testing
 		double[][] correctAnswers = {
 				{78.54, 31.42}, {0, 0},
 				{9, 53}, {1134, 97},
 				{0, 0}, {1, 6}
 		};
 		
+		//Create list of 2 of each shapes
 		ArrayList<Shape> shapes = new ArrayList<Shape>();
 		shapes.add(new Circle("Circle 1", 5));
 		shapes.add(new Circle("Circle 2", -3));
@@ -137,6 +148,7 @@ class ShapeTest {
 		shapes.add(new RightAngledTriangle("Right Angled Triangle 1", -3, -5, -7));
 		shapes.add(new RightAngledTriangle("Right Angled Triangle 2", 1, 2, 3));
 		
+		//Loop over all shapes and check result with correctAnswerArray
 		for(int i = 0; i < shapes.size(); i++) {
 			assertEquals(correctAnswers[i][0], roundToTwoDecimals(shapes.get(i).area()));
 			assertEquals(correctAnswers[i][1], roundToTwoDecimals(shapes.get(i).perimeter()));

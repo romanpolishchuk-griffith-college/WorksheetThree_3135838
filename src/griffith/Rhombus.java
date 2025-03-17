@@ -10,6 +10,7 @@ public class Rhombus extends Shape {
 	private double thirdSide;
 	private double fourthSide;
 	
+	//Init variables
 	Rhombus(String name,
 			double firstDiagonal,
 			double secondDiagonal,
@@ -26,6 +27,7 @@ public class Rhombus extends Shape {
 		this.fourthSide = fourthSide;
 	}
 	
+	//Find rhombus area
 	@Override
 	double area() {
 		if(firstDiagonal <= 0 || secondDiagonal <= 0) {
@@ -33,7 +35,8 @@ public class Rhombus extends Shape {
 		}
 		return (firstDiagonal * secondDiagonal) / 2.0;
 	}
-
+	
+	//Find rhombus perimeter
 	@Override
 	double perimeter() {
 		if(firstSide <= 0 || secondSide <= 0 || thirdSide <= 0 || fourthSide <= 0) {
@@ -42,6 +45,7 @@ public class Rhombus extends Shape {
 		return firstSide + secondSide + thirdSide + fourthSide;
 	}
 
+	//Override toString method
 	@Override
 	public String toString() {
 		return "Rhombus has name: " + getName() +

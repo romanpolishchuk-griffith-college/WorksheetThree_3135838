@@ -9,6 +9,7 @@ public class Circle extends Shape {
 		this.radius = radius;
 	}
 	
+	//Find circle area
 	@Override
 	double area() {
 		if (radius <= 0) {
@@ -17,6 +18,7 @@ public class Circle extends Shape {
 		return Math.PI * (radius * radius);
 	}
 
+	//Find circle perimeter
 	@Override
 	double perimeter() {
 		if (radius <= 0) {
@@ -25,6 +27,7 @@ public class Circle extends Shape {
 		return 2 * Math.PI * radius;
 	}
 
+	//Override toString method
 	@Override
 	public String toString() {
 		return "Circle has name: " + getName() + ", and radius " + radius;
