@@ -2,6 +2,9 @@ package griffith;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+import java.util.Iterator;
+
 import org.junit.jupiter.api.Test;
 
 class ShapeTest {
@@ -118,6 +121,25 @@ class ShapeTest {
 	
 	@Test
 	void testArrayListOfShapes() {
-		fail("Not yet implemented");
+		double[][] correctAnswers = {
+				{78.54, 31.42}, {0, 0},
+				{9, 53}, {1134, 97},
+				{0, 0}, {1, 6}
+		};
+		
+		ArrayList<Shape> shapes = new ArrayList<Shape>();
+		shapes.add(new Circle("Circle 1", 5));
+		shapes.add(new Circle("Circle 2", -3));
+		
+		shapes.add(new Rhombus("Rhombus 1", 3, 6, 9, 12, 15, 17));
+		shapes.add(new Rhombus("Rhombus 2", 54, 42, 32, 27, 21, 17));
+		
+		shapes.add(new RightAngledTriangle("Right Angled Triangle 1", -3, -5, -7));
+		shapes.add(new RightAngledTriangle("Right Angled Triangle 2", 1, 2, 3));
+		
+		for(int i = 0; i < shapes.size(); i++) {
+			assertEquals(correctAnswers[i][0], roundToTwoDecimals(shapes.get(i).area()));
+			assertEquals(correctAnswers[i][1], roundToTwoDecimals(shapes.get(i).perimeter()));
+		}
 	}
 }
