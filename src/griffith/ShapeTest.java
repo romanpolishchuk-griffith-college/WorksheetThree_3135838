@@ -70,7 +70,18 @@ class ShapeTest {
 	
 	@Test
 	void testRhombusToString() {
-		fail("Not yet implemented");
+		Rhombus rhombus = new Rhombus("Test rhombus 1", 2, 3, 4, 5, 6, 10);
+		assertEquals(
+				"Rhombus has name: Test rhombus 1, and firstDiagonal: 2.0, secondDiagonal: 3.0, firstSide: 4.0, secondSide: 5.0, thirdSide: 6.0, fourthSide: 10.0"
+				, rhombus.toString());
+		Rhombus rhombus2 = new Rhombus("Test rhombus 2", 5, 6, 7, 8, 9, 20);
+		assertEquals(
+				"Rhombus has name: Test rhombus 2, and firstDiagonal: 5.0, secondDiagonal: 6.0, firstSide: 7.0, secondSide: 8.0, thirdSide: 9.0, fourthSide: 20.0"
+				, rhombus2.toString());
+		Rhombus rhombus3 = new Rhombus("Test rhombus 3", -5, -6, -7, -8, -9, -20);
+		assertEquals(
+				"Rhombus has name: Test rhombus 3, and firstDiagonal: -5.0, secondDiagonal: -6.0, firstSide: -7.0, secondSide: -8.0, thirdSide: -9.0, fourthSide: -20.0"
+				, rhombus3.toString());
 	}
 	
 	@Test
