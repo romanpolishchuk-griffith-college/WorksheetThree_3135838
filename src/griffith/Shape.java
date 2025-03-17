@@ -4,16 +4,15 @@ public abstract class Shape {
 	private String name;
 
 	Shape(String name){
-		
+		this.name = name;
 	}
 	
 	public String getName() {
-		//stab
-		return "";
+		return name;
 	}
 
 	public void setName(String name) {
-		//stab
+		this.name = name;
 	}
 	
 	abstract double area(); 
