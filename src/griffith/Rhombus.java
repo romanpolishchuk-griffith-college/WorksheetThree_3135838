@@ -44,7 +44,12 @@ public class Rhombus extends Shape {
 
 	@Override
 	public String toString() {
-		//stab
-		return "";
+		return "Rhombus has name: " + getName() +
+				", and firstDiagonal: " + firstDiagonal +
+				", secondDiagonal: " + secondDiagonal + 
+				", firstSide: " + firstSide +
+				", secondSide: " + secondSide +
+				", thirdSide: " + thirdSide +
+				", fourthSide: " + fourthSide;
 	}
 }
