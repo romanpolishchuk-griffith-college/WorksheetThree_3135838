@@ -11,12 +11,17 @@ public class RightAngledTriangle extends Shape {
 			double secondSide,
 			double hypothenuse){
 		super(name);
+		this.firstSide = firstSide;
+		this.secondSide = secondSide;
+		this.hypothenuse = hypothenuse;
 	}
 	
 	@Override
 	double area() {
-		//stab
-		return 0.0;
+		if(firstSide <= 0 || secondSide <= 0) {
+			return 0;
+		}
+		return (firstSide * secondSide) / 2;
 	}
 
 	@Override
